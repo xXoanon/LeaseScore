@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaseScore Analysis Report</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <!-- Action Bar -->
+    <div class="action-bar no-print">
+        <div class="action-bar-content">
+            <button onclick="window.print()" class="action-btn print-btn">
+                Print Report
+            </button>
+            <button onclick="exportToPDF()" class="action-btn pdf-btn">
+                Save as PDF
+            </button>
+            <button onclick="window.close()" class="action-btn close-btn">
+                <span class="btn-icon">✕</span>
+                Close
+            </button>
+        </div>
+    </div>
+
+    <div class="report-wrapper">
+        <!-- PAGE 1: Executive Summary -->
+        <div class="report-page page-1">
+            <div class="page-header">
+                <div class="header-content">
+                    <h1>LeaseScore Analysis Report</h1>
+                    <div class="report-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Generated:</span>
+                            <span class="meta-value" id="reportDate"></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Report ID:</span>
+                            <span class="meta-value" id="reportId"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="deal-banner" id="dealBanner">
+                    <div class="banner-content">
+                        <div class="banner-rating" id="dealRating"></div>
+                        <div class="banner-score" id="dealScore"></div>
+                    </div>
+                </div>
+
+                <div class="summary-section">
+                    <h2 class="section-title">Executive Summary</h2>
+                    <div class="summary-grid" id="summaryGrid"></div>
+                </div>
+
+                <div class="scoring-section">
+                    <h2 class="section-title">Comprehensive Scoring Analysis</h2>
+                    <div class="scoring-bars" id="scoringBars"></div>
+                </div>
+
+                <div class="insights-section">
+                    <h2 class="section-title">Critical Insights</h2>
+                    <div class="insights-grid" id="insightsGrid"></div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-content">
+                    <span>Page 1 of 8</span>
+                    <span>LeaseScore - Professional Lease Analysis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 2: Detailed Financial Analysis -->
+        <div class="report-page page-2">
+            <div class="page-header">
+                <h2>Detailed Financial Analysis</h2>
+            </div>
+
+            <div class="page-content">
+                <div class="breakdown-section">
+                    <h2 class="section-title">Monthly Payment Breakdown</h2>
+                    <div class="breakdown-visual" id="monthlyBreakdown"></div>
+                </div>
+
+                <div class="cost-section">
+                    <h2 class="section-title">Total Cost Analysis</h2>
+                    <div class="cost-table" id="costTable"></div>
+                </div>
+
+                <div class="financial-metrics-section">
+                    <h2 class="section-title">Financial Metrics & Ratios</h2>
+                    <div class="metrics-grid" id="financialMetrics"></div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-content">
+                    <span>Page 2 of 8</span>
+                    <span>LeaseScore - Professional Lease Analysis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 3: Lease vs Buy Comparison -->
+        <div class="report-page page-3">
+            <div class="page-header">
+                <h2>Lease vs Buy Comparison</h2>
+            </div>
+
+            <div class="page-content">
+                <div class="comparison-section">
+                    <h2 class="section-title">Side-by-Side Comparison</h2>
+                    <div class="comparison-grid" id="comparisonGrid"></div>
+                </div>
+
+                <div class="breakeven-section">
+                    <h2 class="section-title">Break-Even Analysis</h2>
+                    <div class="breakeven-content" id="breakevenAnalysis"></div>
+                </div>
+
+                <div class="scenarios-section">
+                    <h2 class="section-title">Alternative Scenarios</h2>
+                    <div class="scenarios-grid" id="scenariosGrid"></div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-content">
+                    <span>Page 3 of 8</span>
+                    <span>LeaseScore - Professional Lease Analysis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 4: Market Analysis & Depreciation -->
+        <div class="report-page page-4">
+            <div class="page-header">
+                <h2>Market Analysis & Depreciation</h2>
+            </div>
+
+            <div class="page-content">
+                <div class="market-section">
+                    <h2 class="section-title">Market Position Analysis</h2>
+                    <div class="market-grid" id="marketAnalysis"></div>
+                </div>
+
+                <div class="depreciation-section">
+                    <h2 class="section-title">Depreciation Analysis</h2>
+                    <div class="depreciation-content" id="depreciationAnalysis"></div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-content">
+                    <span>Page 4 of 8</span>
+                    <span>LeaseScore - Professional Lease Analysis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 5: Interest Rate & Risk Assessment -->
+        <div class="report-page page-5">
+            <div class="page-header">
+                <h2>Interest Rate & Risk Assessment</h2>
+            </div>
+
+            <div class="page-content">
+                <div class="interest-section">
+                    <h2 class="section-title">Interest Rate Analysis</h2>
+                    <div class="interest-content" id="interestAnalysis"></div>
+                </div>
+
+                <div class="risk-section">
+                    <h2 class="section-title">Risk Factor Analysis</h2>
+                    <div class="risk-grid" id="riskAnalysis"></div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-content">
+                    <span>Page 5 of 8</span>
+                    <span>LeaseScore - Professional Lease Analysis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 6: Deal Optimization Opportunities -->
+        <div class="report-page page-6">
+            <div class="page-header">
+                <h2>Deal Optimization Opportunities</h2>
+            </div>
+
+            <div class="page-content">
+                <div class="optimization-section">
+                    <h2 class="section-title">Recommended Improvements</h2>
+                    <div class="optimization-content" id="optimizationRecommendations"></div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-content">
+                    <span>Page 6 of 8</span>
+                    <span>LeaseScore - Professional Lease Analysis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 7: Negotiation Strategy -->
+        <div class="report-page page-7">
+            <div class="page-header">
+                <h2>Negotiation Strategy</h2>
+            </div>
+
+            <div class="page-content">
+                <div class="negotiation-section">
+                    <h2 class="section-title">Prioritized Negotiation Tactics</h2>
+                    <div class="negotiation-content" id="negotiationStrategy"></div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-content">
+                    <span>Page 7 of 8</span>
+                    <span>LeaseScore - Professional Lease Analysis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 8: Vehicle Details & Terms -->
+        <div class="report-page page-7">
+            <div class="page-header">
+                <h2>Vehicle & Lease Details</h2>
+            </div>
+
+            <div class="page-content">
+                <div class="vehicle-section">
+                    <h2 class="section-title">Vehicle Information</h2>
+                    <div class="details-grid" id="vehicleDetails"></div>
+                </div>
+
+                <div class="terms-section">
+                    <h2 class="section-title">Lease Terms & Conditions</h2>
+                    <div class="details-grid" id="leaseTerms"></div>
+                </div>
+
+                <div class="financial-section">
+                    <h2 class="section-title">Financial Details</h2>
+                    <div class="details-grid" id="financialDetails"></div>
+                </div>
+
+                <div class="disclaimer-section">
+                    <h3>Important Disclaimer</h3>
+                    <p>This report is for informational purposes only and should not be considered financial advice. Actual lease terms may vary based on credit approval, dealer policies, and manufacturer incentives. Always review the complete lease contract before signing and verify all numbers with your dealer. Consider consulting with a financial advisor for personalized advice.</p>
+                    <p><strong>Generated by LeaseScore</strong> - A professional tool for evaluating lease deals.</p>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-content">
+                    <span>Page 8 of 8</span>
+                    <span>LeaseScore - Professional Lease Analysis</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="report.js"></script>
+</body>
+</html>

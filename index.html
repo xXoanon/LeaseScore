@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Free Car Lease Calculator - Analyze Your Lease Deal | LeaseScore</title>
+    <meta name="title" content="Free Car Lease Calculator - Analyze Your Lease Deal | LeaseScore">
+    <meta name="description" content="Free car lease calculator with instant scoring. Calculate monthly payments, convert money factor to APR, and evaluate if your auto lease is a good deal using the 1% rule. Get detailed analysis in seconds.">
+    <meta name="keywords" content="car lease calculator, lease payment calculator, auto lease calculator, money factor calculator, lease deal analyzer, 1% rule calculator, car leasing tool, lease vs buy calculator, residual value calculator, lease scoring">
+    <meta name="author" content="LeaseScore">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourdomain.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Free Car Lease Calculator - Analyze Your Lease Deal | LeaseScore">
+    <meta property="og:description" content="Free car lease calculator with instant scoring. Calculate monthly payments, convert money factor to APR, and evaluate if your auto lease is a good deal.">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="Free Car Lease Calculator - Analyze Your Lease Deal | LeaseScore">
+    <meta property="twitter:description" content="Free car lease calculator with instant scoring. Calculate monthly payments, convert money factor to APR, and evaluate if your auto lease is a good deal.">
+    <meta property="twitter:image" content="https://yourdomain.com/twitter-image.jpg">
+    
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "LeaseScore",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Free car lease calculator and analyzer that helps you evaluate lease deals, calculate payments, and determine if your auto lease is a good deal.",
+      "url": "https://yourdomain.com",
+      "featureList": "Lease payment calculator, Money factor to APR converter, 1% rule checker, Lease vs buy comparison, Deal scoring system"
+    }
+    </script>
+    
+    <!-- Structured Data - FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a car lease?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A car lease is essentially a long-term rental agreement where you pay to use a vehicle for a set period (typically 24-48 months) without owning it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the 1% rule for leasing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 1% rule states that a good lease deal should have a monthly payment (including tax) that equals 1% or less of the vehicle's MSRP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a money factor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Money factor is the lease equivalent of an interest rate. It's expressed as a small decimal (e.g., 0.00250). To convert to APR, multiply by 2,400."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I put money down on a lease?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally no. If the car is totaled or stolen, you lose your down payment. It's better to keep that money and make slightly higher monthly payments."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <h1>LeaseScore - Free Car Lease Calculator</h1>
+                <p class="subtitle">Professional lease analysis and scoring tool - Calculate if your auto lease is a good deal</p>
+            </div>
+            <div class="header-support">
+                <p class="header-support-text">Saved you money? Support this free tool!</p>
+                <a href="https://buymeacoffee.com/d050" class="header-coffee-button" target="_blank" rel="noopener">
+                    <span class="coffee-icon">☕</span>
+                    <span>Buy Me a Coffee</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- <div class="ad-slot ad-top-banner">Advertisement - 728x90</div> -->
+        
+        <div class="main-wrapper">
+            <aside class="sidebar-left" role="complementary" aria-label="Quick tips">
+                <!-- <div class="ad-slot ad-sidebar-rect">Ad 300x250</div> -->
+                
+                <div class="card card-compact">
+                    <h3>Lease Evaluation Rules</h3>
+                    <div class="info-box">
+                        <strong>1% Rule</strong>
+                        Monthly payment should be ≤1% of MSRP for a great deal
+                    </div>
+                    <div class="info-box">
+                        <strong>Zero Down</strong>
+                        Avoid putting money down on a lease
+                    </div>
+                    <div class="info-box">
+                        <strong>Negotiate Price</strong>
+                        Always negotiate the selling price, not just the payment
+                    </div>
+                    <div class="info-box">
+                        <strong>Money Factor</strong>
+                        Multiply by 2400 to get APR equivalent
+                    </div>
+                </div>
+                
+                <div class="card card-compact">
+                    <h3>Typical Lease Terms</h3>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">Residual Value:</span>
+                            <span class="info-value">50-65% of MSRP</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Acquisition Fee:</span>
+                            <span class="info-value">$395-$995</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Disposition Fee:</span>
+                            <span class="info-value">$300-$500</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Mileage Allowance:</span>
+                            <span class="info-value">10k-15k/year</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Excess Mileage:</span>
+                            <span class="info-value">$0.15-$0.30/mile</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+            <main>
+                <div class="calculator-container">
+                    <div class="card">
+                        <h2>Lease Calculator</h2>
+                        
+                        <form id="leaseForm">
+                            <!-- Vehicle Pricing -->
+                            <div class="form-section">
+                                <h3 class="form-section-title">Vehicle Pricing</h3>
+                                
+                                <div class="form-group">
+                                    <label for="msrp">
+                                        MSRP (Sticker Price)
+                                        <span class="tooltip">?<span class="tooltip-text">Manufacturer's Suggested Retail Price - the sticker price on the car window</span></span>
+                                        <span class="field-status" id="msrpStatus"></span>
+                                    </label>
+                                    <div class="input-with-slider">
+                                        <div class="input-wrapper">
+                                            <span class="input-prefix">$</span>
+                                            <input type="number" id="msrp" placeholder="60000" min="0" step="100" value="">
+                                        </div>
+                                        <input type="range" id="msrpSlider" min="10000" max="150000" step="500" value="60000">
+                                        <div class="slider-labels">
+                                            <span>$10k</span>
+                                            <span>$150k</span>
+                                        </div>
+                                    </div>
+                                    <div class="field-hint" id="msrpHint"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="negotiatedPrice">
+                                        Negotiated Price (Selling Price)
+                                        <span class="tooltip">?<span class="tooltip-text">The actual price you negotiated with the dealer - should be below MSRP</span></span>
+                                        <span class="field-status" id="negotiatedPriceStatus"></span>
+                                    </label>
+                                    <div class="input-with-slider">
+                                        <div class="input-wrapper">
+                                            <span class="input-prefix">$</span>
+                                            <input type="number" id="negotiatedPrice" placeholder="55000" min="0" step="100" value="">
+                                        </div>
+                                        <input type="range" id="negotiatedPriceSlider" min="10000" max="150000" step="500" value="55000">
+                                        <div class="slider-labels">
+                                            <span>$10k</span>
+                                            <span>$150k</span>
+                                        </div>
+                                    </div>
+                                    <div class="field-hint" id="negotiatedPriceHint"></div>
+                                </div>
+                            </div>
+
+                            <!-- Lease Terms -->
+                            <div class="form-section">
+                                <h3 class="form-section-title">Lease Terms</h3>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="monthlyPayment">
+                                            Monthly Payment (before tax)
+                                            <span class="tooltip">?<span class="tooltip-text">Your monthly lease payment BEFORE sales tax is added</span></span>
+                                            <span class="field-status" id="monthlyPaymentStatus"></span>
+                                        </label>
+                                        <div class="input-with-slider">
+                                            <div class="input-wrapper">
+                                                <span class="input-prefix">$</span>
+                                                <input type="number" id="monthlyPayment" placeholder="500" min="0" step="1" value="">
+                                            </div>
+                                            <input type="range" id="monthlyPaymentSlider" min="0" max="2000" step="10" value="500">
+                                            <div class="slider-labels">
+                                                <span>$0</span>
+                                                <span>$2k</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-hint" id="monthlyPaymentHint"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="leaseTerm">
+                                            Lease Term
+                                            <span class="tooltip">?<span class="tooltip-text">Length of the lease in months - typically 24, 36, or 48 months</span></span>
+                                        </label>
+                                        <select id="leaseTerm">
+                                            <option value="24">24 months</option>
+                                            <option value="36" selected>36 months</option>
+                                            <option value="48">48 months</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="downPayment">
+                                            Down Payment
+                                            <span class="tooltip">?<span class="tooltip-text">Money paid upfront - experts recommend $0 down on leases</span></span>
+                                            <span class="field-status" id="downPaymentStatus"></span>
+                                        </label>
+                                        <div class="input-with-slider">
+                                            <div class="input-wrapper">
+                                                <span class="input-prefix">$</span>
+                                                <input type="number" id="downPayment" placeholder="0" value="0" min="0" step="100">
+                                            </div>
+                                            <input type="range" id="downPaymentSlider" min="0" max="15000" step="100" value="0">
+                                            <div class="slider-labels">
+                                                <span>$0</span>
+                                                <span>$15k</span>
+                                            </div>
+                                        </div>
+                                        <div class="field-hint" id="downPaymentHint"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="salesTax">
+                                            Sales Tax (%)
+                                            <span class="tooltip">?<span class="tooltip-text">Your state/local sales tax rate applied to monthly payments</span></span>
+                                        </label>
+                                        <div class="input-with-slider">
+                                            <div class="input-wrapper">
+                                                <input type="number" id="salesTax" placeholder="7.5" min="0" max="15" step="0.1" value="7.5">
+                                                <span class="input-suffix">%</span>
+                                            </div>
+                                            <input type="range" id="salesTaxSlider" min="0" max="15" step="0.1" value="7.5">
+                                            <div class="slider-labels">
+                                                <span>0%</span>
+                                                <span>15%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Interest Rate -->
+                            <div class="form-section">
+                                <h3 class="form-section-title">Interest Rate</h3>
+                                
+                                <div class="form-group">
+                                    <label for="inputMode">
+                                        Input Method
+                                        <span class="tooltip">?<span class="tooltip-text">Choose how to enter the interest rate - Money Factor or APR %</span></span>
+                                    </label>
+                                    <select id="inputMode">
+                                        <option value="moneyFactor">Money Factor</option>
+                                        <option value="interestRate">Interest Rate (APR %)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group" id="moneyFactorGroup">
+                                    <label for="moneyFactor">
+                                        Money Factor
+                                        <span class="tooltip">?<span class="tooltip-text">Lease interest rate as a decimal - multiply by 2400 to get APR</span></span>
+                                        <span class="field-status" id="moneyFactorStatus"></span>
+                                    </label>
+                                    <input type="number" id="moneyFactor" placeholder="0.00250" min="0" max="0.01" step="0.00001" value="0.00250">
+                                    <div class="field-hint" id="moneyFactorHint">Equivalent APR: <span id="aprEquivalent">6.00%</span></div>
+                                </div>
+
+                                <div class="form-group" id="interestRateGroup" style="display: none;">
+                                    <label for="interestRate">
+                                        Interest Rate (APR %)
+                                        <span class="tooltip">?<span class="tooltip-text">Annual Percentage Rate - the interest rate on your lease</span></span>
+                                    </label>
+                                    <input type="number" id="interestRate" placeholder="6.0" min="0" max="20" step="0.01" value="6.0">
+                                    <div class="field-hint" id="interestRateHint">Equivalent Money Factor: <span id="mfEquivalent">0.00250</span></div>
+                                </div>
+                            </div>
+
+                            <!-- Advanced Options -->
+                            <div class="form-section">
+                                <h3 class="section-heading">Advanced Options</h3>
+                                
+                                <div class="advanced-options" id="advancedOptions">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="residualValue">
+                                                Residual Value
+                                                <span class="tooltip">?<span class="tooltip-text">Estimated value at lease end. Leave blank to auto-calculate as 60% of negotiated price.</span></span>
+                                                <span class="field-status" id="residualValueStatus"></span>
+                                            </label>
+                                            <div class="input-with-slider">
+                                                <div class="input-wrapper">
+                                                    <span class="input-prefix">$</span>
+                                                    <input type="number" id="residualValue" placeholder="Auto" min="0" step="100" value="">
+                                                </div>
+                                                <input type="range" id="residualValueSlider" min="0" max="100000" step="500" value="0">
+                                                <div class="slider-labels">
+                                                    <span>$0</span>
+                                                    <span>$100k</span>
+                                                </div>
+                                            </div>
+                                            <div class="field-hint" id="residualValueHint"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="tradeInValue">
+                                                Trade-in Value
+                                                <span class="tooltip">?<span class="tooltip-text">Value of your current vehicle being traded in</span></span>
+                                            </label>
+                                            <div class="input-with-slider">
+                                                <div class="input-wrapper">
+                                                    <span class="input-prefix">$</span>
+                                                    <input type="number" id="tradeInValue" placeholder="0" min="0" step="100" value="0">
+                                                </div>
+                                                <input type="range" id="tradeInValueSlider" min="0" max="50000" step="500" value="0">
+                                                <div class="slider-labels">
+                                                    <span>$0</span>
+                                                    <span>$50k</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="upfrontTax">
+                                                Upfront Tax
+                                                <span class="tooltip">?<span class="tooltip-text">Sales tax paid at signing (varies by state)</span></span>
+                                            </label>
+                                            <div class="input-with-slider">
+                                                <div class="input-wrapper">
+                                                    <span class="input-prefix">$</span>
+                                                    <input type="number" id="upfrontTax" placeholder="0" min="0" step="1" value="0">
+                                                </div>
+                                                <input type="range" id="upfrontTaxSlider" min="0" max="5000" step="50" value="0">
+                                                <div class="slider-labels">
+                                                    <span>$0</span>
+                                                    <span>$5k</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="acquisitionFee">
+                                                Acquisition Fee
+                                                <span class="tooltip">?<span class="tooltip-text">Bank/dealer fee to process the lease (typically $395-$995)</span></span>
+                                            </label>
+                                            <div class="input-with-slider">
+                                                <div class="input-wrapper">
+                                                    <span class="input-prefix">$</span>
+                                                    <input type="number" id="acquisitionFee" placeholder="595" min="0" step="1" value="595">
+                                                </div>
+                                                <input type="range" id="acquisitionFeeSlider" min="0" max="2000" step="50" value="595">
+                                                <div class="slider-labels">
+                                                    <span>$0</span>
+                                                    <span>$2k</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="form-actions">
+                                <button type="submit" class="btn-primary" id="generateReportBtn">
+                                    <span class="btn-text">Generate Detailed Report</span>
+                                </button>
+                                <button type="button" class="btn-secondary" id="clearBtn">Clear All</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- <div class="ad-slot ad-inline-content">Ad 728x90</div> -->
+            </main>
+            
+            <aside class="sidebar-right" role="complementary" aria-label="Market information">
+                <!-- <div class="ad-slot ad-sidebar-square">Ad 300x250</div> -->
+                <div class="card card-compact">
+                    <h3>Current Market Rates</h3>
+                    <div class="quick-stats">
+                        <div class="stat-box">
+                            <div class="stat-label">Avg APR</div>
+                            <div class="stat-value">6.5%</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-label">Good Deal</div>
+                            <div class="stat-value">&lt;1%</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.75rem; color: #64748b; margin-top: 8px;">Based on current market averages</p>
+                </div>
+                <div class="card card-compact">
+                    <h3>Lease vs Buy Decision</h3>
+                    <div class="info-list">
+                        <div class="decision-item">
+                            <strong>Choose Lease If:</strong>
+                            <ul>
+                                <li>Drive &lt;15k miles/year</li>
+                                <li>Want new car every 3 years</li>
+                                <li>Prefer lower payments</li>
+                                <li>Don't want maintenance costs</li>
+                            </ul>
+                        </div>
+                        <div class="decision-item">
+                            <strong>Choose Buy If:</strong>
+                            <ul>
+                                <li>Drive &gt;15k miles/year</li>
+                                <li>Keep cars 5+ years</li>
+                                <li>Want to build equity</li>
+                                <li>Customize your vehicle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        
+        <!-- <div class="ad-slot ad-inline-content" style="margin: 20px 0;">Advertisement - 728x90</div> -->
+        
+        <section class="faq-section" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Frequently Asked Questions About Car Leasing</h2>
+            <div class="faq-grid">
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <h4>What is a car lease?</h4>
+                        <p>A car lease is essentially a long-term rental agreement where you pay to use a vehicle for a set period (typically 24-48 months) without owning it.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What is the 1% rule for leasing?</h4>
+                        <p>The 1% rule states that a good lease deal should have a monthly payment (including tax) that equals 1% or less of the vehicle's MSRP.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What is a money factor?</h4>
+                        <p>Money factor is the lease equivalent of an interest rate. It's expressed as a small decimal (e.g., 0.00250). To convert to APR, multiply by 2,400.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Should I put money down on a lease?</h4>
+                        <p>Generally no. If the car is totaled or stolen, you lose your down payment. It's better to keep that money and make slightly higher monthly payments.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What is residual value?</h4>
+                        <p>Residual value is the estimated worth of the vehicle at the end of the lease term. It's typically 50-65% of MSRP.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I negotiate a lease?</h4>
+                        <p>Yes! You can negotiate the selling price (capitalized cost), money factor, and fees. Always negotiate the price before discussing monthly payments.</p>
+                    </div>
+                </div>
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <h4>How many miles can I drive?</h4>
+                        <p>Standard leases allow 10,000-15,000 miles per year. Excess mileage costs $0.15-$0.30 per mile.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What happens at lease end?</h4>
+                        <p>You have three options: (1) Return the vehicle, (2) Purchase it for the residual value, or (3) Trade it in for a new lease.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Is leasing or buying cheaper?</h4>
+                        <p>Leasing has lower monthly payments but no equity. Over 10+ years, buying is usually cheaper. Lease if you want new cars every 3 years.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I end a lease early?</h4>
+                        <p>Yes, but it's expensive. You'll typically pay all remaining payments plus early termination fees. Better option: transfer your lease to someone else.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What is gap insurance?</h4>
+                        <p>Gap insurance covers the difference between what you owe and the car's value if it's totaled or stolen. Most leases include it automatically.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do I need to maintain a leased car?</h4>
+                        <p>Yes. You must follow the manufacturer's maintenance schedule and keep records. At lease end, you'll be charged for any deferred maintenance.</p>
+                    </div>
+                </div>
+                <div class="faq-column">
+                    <div class="faq-item">
+                        <h4>What credit score do I need to lease?</h4>
+                        <p>Most leases require a credit score of 620+, but the best rates go to scores of 700+.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Are lease payments tax deductible?</h4>
+                        <p>If you use the vehicle for business, you may deduct a portion of lease payments. Consult a tax professional for your specific situation.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What is a lease transfer?</h4>
+                        <p>Lease transfer (or lease assumption) is when someone else takes over your lease payments and obligations. It's a good way to exit a lease early.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Should I lease or finance a used car?</h4>
+                        <p>Used car leases are rare and usually not good deals. If considering a used vehicle, financing is typically the better option.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I modify a leased car?</h4>
+                        <p>Generally no. Most lease agreements prohibit modifications. Any changes must be reversed before returning the vehicle.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How do I get the best lease deal?</h4>
+                        <p>1) Negotiate the selling price, not payment. 2) Shop multiple dealers. 3) Lease high-residual vehicles. 4) Time your lease for manufacturer incentives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- <div class="ad-slot ad-inline-content" style="margin: 20px 0;">Advertisement - 728x90</div> -->
+        
+        <section class="resources-section" aria-labelledby="resources-heading">
+            <h2>Lease Calculation Formulas</h2>
+            <div class="formula-grid">
+                <div class="formula-card">
+                    <h3>Monthly Depreciation</h3>
+                    <div class="formula">(Capitalized Cost - Residual Value) ÷ Lease Term</div>
+                    <p class="formula-note">This is the portion of the vehicle's value you're using</p>
+                </div>
+                <div class="formula-card">
+                    <h3>Monthly Finance Charge</h3>
+                    <div class="formula">(Capitalized Cost + Residual Value) × Money Factor</div>
+                    <p class="formula-note">This is the interest/rent charge on the lease</p>
+                </div>
+                <div class="formula-card">
+                    <h3>Base Monthly Payment</h3>
+                    <div class="formula">Monthly Depreciation + Monthly Finance Charge</div>
+                    <p class="formula-note">Add sales tax to get your total monthly payment</p>
+                </div>
+                <div class="formula-card">
+                    <h3>Money Factor to APR</h3>
+                    <div class="formula">Money Factor × 2,400 = APR</div>
+                    <p class="formula-note">Example: 0.00250 × 2,400 = 6.0% APR</p>
+                </div>
+                <div class="formula-card">
+                    <h3>Total Lease Cost</h3>
+                    <div class="formula">(Monthly Payment × Term) + Down Payment + Fees</div>
+                    <p class="formula-note">Your total out-of-pocket cost for the lease</p>
+                </div>
+                <div class="formula-card">
+                    <h3>Cost to Own After Lease</h3>
+                    <div class="formula">Total Lease Cost + Residual Value</div>
+                    <p class="formula-note">What you'd pay to own the car after leasing</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- <div class="ad-slot ad-footer">Advertisement - 728x90</div> -->
+    </div>
+
+    <footer role="contentinfo" style="text-align: center; padding: 20px 0; color: #64748b; font-size: 0.85rem; border-top: 1px solid #e2e8f0; margin-top: 40px;">
+        <p>&copy; 2024 LeaseScore. Free car lease calculator and analysis tool. All rights reserved.</p>
+        <p style="margin-top: 8px;">
+            <a href="#" style="color: #1e40af; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | 
+            <a href="#" style="color: #1e40af; text-decoration: none; margin: 0 10px;">Terms of Service</a> | 
+            <a href="#" style="color: #1e40af; text-decoration: none; margin: 0 10px;">Contact</a>
+        </p>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
