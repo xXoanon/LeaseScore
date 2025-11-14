@@ -97,12 +97,40 @@ h1 {
 .header-support {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     padding: 16px 24px;
     background: #f8fafc;
     border: 2px solid #e2e8f0;
     border-left: 4px solid #FFDD00;
     transition: padding 0.3s ease;
+}
+
+.feedback-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: white;
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border: 2px solid #1e40af;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.feedback-button:hover {
+    background: #1e40af;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.feedback-icon {
+    font-size: 1rem;
 }
 
 .header-support-text {
@@ -1384,25 +1412,50 @@ input[type="range"]::-moz-range-thumb:hover {
 }
 
 @media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+    
     header .container {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 12px;
         text-align: center;
+        padding: 12px 0;
     }
     
     .header-content {
         align-items: center;
     }
     
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 0.8rem;
+    }
+    
     .header-support {
         flex-direction: column;
-        gap: 12px;
-        padding: 16px;
+        gap: 8px;
+        padding: 10px 16px;
     }
     
     .header-support-text {
         text-align: center;
         max-width: 100%;
+        font-size: 0.8rem;
+    }
+    
+    .feedback-button,
+    .header-coffee-button {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .feedback-icon,
+    .coffee-icon {
+        font-size: 1rem;
     }
     
     .report-grid,

@@ -11,11 +11,6 @@ function getReportData() {
     return null;
 }
 
-// Generate unique report ID
-function generateReportId() {
-    return 'LS-' + Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).substr(2, 4).toUpperCase();
-}
-
 // Format currency
 function formatCurrency(value) {
     return '$' + value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -318,7 +313,6 @@ document.addEventListener('DOMContentLoaded', function() {
         hour: '2-digit',
         minute: '2-digit'
     });
-    document.getElementById('reportId').textContent = generateReportId();
     
     // Populate all pages
     populatePage1(calc, values, advanced);

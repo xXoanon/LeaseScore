@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /report.html
-
-Sitemap: https://yourdomain.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
